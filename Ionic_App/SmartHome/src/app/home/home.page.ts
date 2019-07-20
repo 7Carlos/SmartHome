@@ -20,11 +20,25 @@ export class HomePage {
   constructor(public httpClient: HttpClient,
               private router: Router,
               public formBuilder: FormBuilder) {
-                this.myForm = this.createMyForm();
-               }
+    this.myForm = this.createMyForm();
+    this.data.username='';
+    this.data.password='';
+    this.data.response='';
+
+  }
 
   Encender(){
-    this.httpClient.post('http://10.3.141.1/api.php', {})      .subscribe(data => {
+    this.httpClient.post('http://10.3.141.1/on1.php', {})      
+    .subscribe(data => {
+        console.log(data);
+      }, error => {
+        console.log(error);
+      });
+  }
+
+  Apagar(){
+    this.httpClient.post('http://10.3.141.1/off1.php', {})      
+    .subscribe(data => {
         console.log(data);
       }, error => {
         console.log(error);
@@ -32,14 +46,30 @@ export class HomePage {
   }
 
   Login(){
-    // Comprobar Nombre de Usuario y Contraseña
+    var link = 'http://10.3.141.1/login.php';
+    var datos = JSON.stringify({username: this.myForm.value.username, password: this.myForm.value.password});
 
+    //console.log(this.myForm.value);
 
-    this.router.navigate(['/menu']);
+    this.httpClient.post(link, datos)
+      .subscribe(data =>{
+        this.data.response = data["_body"];
+      }, error =>{
+        console.log("Conexión Fallida");
+      });
+    
+    console.log("Respuesta recibida:");
+    console.log(this.data.response);
+
+    if(this.data.response == "true")
+    {
+      this.router.navigate(['/menu']);
+    }
+    
   }
 
   saveData(){
-    console.log(this.myForm.value.username);
+    console.log(this.myForm.value);
   }
 
   private createMyForm(){
