@@ -45,6 +45,15 @@ export class HomePage {
       });
   }
 
+  MandarCorreo(){
+    this.httpClient.post('http://10.3.141.1/correo.php', {})      
+    .subscribe(data => {
+        console.log(data);
+      }, error => {
+        console.log(error);
+      });
+  }
+
   Login(){
     var link = 'http://10.3.141.1/login.php';
     var datos = JSON.stringify({username: this.myForm.value.username, password: this.myForm.value.password});
