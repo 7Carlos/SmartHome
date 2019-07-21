@@ -36,6 +36,12 @@
                 "input": "src/theme/variables.scss"
               },
               {
+                "input": "boostrap/css/bootstrap.min.css"
+              },
+              {
+                "input": "boostrap/estilo.css"
+              },
+              {
                 "input": "src/global.scss"
               },
               {
