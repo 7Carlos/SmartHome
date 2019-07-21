@@ -36,6 +36,12 @@
                 "input": "src/theme/variables.scss"
               },
               {
+                "input": "boostrap/css/bootstrap.min.css"   /*modulo de boostrap*/
+              },
+              {
+                "input": "boostrap/estilo.css"   /*modulo de boostrap*/
+              },
+              {
                 "input": "src/global.scss"
               },
               {
