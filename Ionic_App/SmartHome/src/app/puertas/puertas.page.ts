@@ -49,9 +49,16 @@ export class PuertasPage implements OnInit {
       });
   }
 
+  MandarCorreo(){
+    this.httpClient.post('http://10.74.16.79/correo.php', {})      
+    .subscribe(data => {
+        console.log(data);
+      }, error => {
+        console.log(error);
+      });
+  }
 
  
-
 
 
 
