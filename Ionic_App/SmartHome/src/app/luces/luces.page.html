@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Luces</ion-title>
+    <ion-title>Luces <img src = "/assets/Imagenes/regresar.png" routerLink="/menu" align="right" width="25" height="25"></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+    <div class="row">
+        <div class="col-md-12"><h3>Habitacion 1</h3></div>
+      </div>
+
+    <div class="row">
+        <div class="col-md-6"><img src = "/assets/Imagenes/Luces_encendido.png" (click)="Encender1()" border="0" width="150" height="215" margin:50xp>
+         <img src = "/assets/Imagenes/Luces_apagado.png" (click)="Apagar1()" border="0" width="150" height="215"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12"><h3>Habitacion 2</h3></div>
+      </div>
+
+    <div class="row">
+        <div class="col-md-6"><img src = "/assets/Imagenes/Luces_encendido.png" (click)="Encender2()" border="0" width="150" height="215">
+      <img src = "/assets/Imagenes/Luces_apagado.png" border="0" width="150" height="215"  (click)="Apagar2()"></div>
+      </div>
 
 </ion-content>

@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Puertas</ion-title>
+    <ion-title>Puertas <img src = "/assets/Imagenes/regresar.png" routerLink="/menu" align="right" width="25" height="25"></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+    <div class="row">
+        <div class="col-md-12"><h3>Puerta Entrada</h3></div>
+      </div>
+
+    <div class="row">
+        <div class="col-md-6"><img src = "/assets/Imagenes/Puerta_abierta.png" (click)="Abrir()" border="0" width="150" height="215" margin:50xp>
+        <img src = "/assets/Imagenes/Puerta_cerrada.png" (click)="Cerrar()" border="0" width="150" height="215"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12"><h3>Cochera</h3></div>
+      </div>
+
+    <div class="row">
+        <div class="col-md-6"><img src = "/assets/Imagenes/Cochera_abierta.png" (click)="Abrir()" border="0" width="150" height="215">
+      <img src = "/assets/Imagenes/Cochera_cerrada.png" border="0" width="150" height="215"  (click)="Cerrar()"></div>
+      </div>
+
 
 </ion-content>

@@ -28,7 +28,7 @@ export class HomePage {
   }
 
   Encender(){
-    this.httpClient.post('http://10.3.141.1/on1.php', {})      
+    this.httpClient.post('http://10.74.16.79/on1.php', {})      
     .subscribe(data => {
         console.log(data);
       }, error => {
@@ -37,7 +37,7 @@ export class HomePage {
   }
 
   Apagar(){
-    this.httpClient.post('http://10.3.141.1/off1.php', {})      
+    this.httpClient.post('http://10.74.16.79/off1.php', {})      
     .subscribe(data => {
         console.log(data);
       }, error => {
@@ -46,7 +46,7 @@ export class HomePage {
   }
 
   MandarCorreo(){
-    this.httpClient.post('http://10.3.141.1/correo.php', {})      
+    this.httpClient.post('http://10.74.16.79/correo.php', {})      
     .subscribe(data => {
         console.log(data);
       }, error => {
@@ -54,8 +54,14 @@ export class HomePage {
       });
   }
 
+PaginaLuces()
+  {
+    this.router.navigate(['/luces']);
+  }
+
+
   Login(){
-    var link = 'http://10.3.141.1/login.php';
+    var link = 'http://10.74.16.79/login.php';
     var datos = JSON.stringify({username: this.myForm.value.username, password: this.myForm.value.password});
 
     //console.log(this.myForm.value);
