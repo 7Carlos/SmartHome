@@ -76,7 +76,7 @@ PaginaLuces()
     console.log("Respuesta recibida:");
     console.log(this.data.response);
 
-    if(this.data.response == "true")
+    if(this.data.response != "Conexión Fallida")
     {
       this.router.navigate(['/menu']);
     }

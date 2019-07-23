@@ -40,6 +40,16 @@ export class PuertasPage implements OnInit {
       });
   }
 
+  EncenderAlarma(){
+    this.httpClient.post('http://10.74.16.79/on1.php', {})      
+    .subscribe(data => {
+        console.log(data);
+      }, error => {
+        console.log(error);
+      });
+  }
+
+
  
 
 
