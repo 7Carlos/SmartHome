@@ -25,8 +25,8 @@ export class AlarmasPage implements OnInit {
     
   }
 
-  Apagar1(){
-    this.httpClient.post('http://10.74.16.79/off1.php', {})      
+  ApagarAlarma(){
+    this.httpClient.post('http://10.74.16.79/alarma.php', {})      
     .subscribe(data => {
         console.log(data);
       }, error => {
